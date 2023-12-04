@@ -41,7 +41,7 @@ jobs:
           cd frontend
           docker build -t sample20 .
 
-          docker login -u "${vaji123}" -p "${Octalite1234}" docker.io 
+          docker login -u "${vaji123}" -p "${dckr_pat_gOMv_MeLr1IHPTRdkXCUqJMAKWE}" docker.io 
           
           docker tag sample20 vaji123/sample:sample20
           docker push  docker.io/vaji123/sample:sample20

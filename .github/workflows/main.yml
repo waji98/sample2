@@ -44,7 +44,7 @@ jobs:
           docker login -u "${vaji123}" -p "${Octalite1234}" docker.io 
           
           docker tag sample20 vaji123/sample:sample20
-          docker push  vaji123/sample:sample20
+          docker push  docker.io/vaji123/sample:sample20
 
       - name: Deploy to Kubernetes
         run: |

@@ -58,6 +58,5 @@ jobs:
         run: |
 
           cd kubernetes
-          sed -i 's/8080/5000/g' frontend-deployment.yaml
           kubectl apply -f frontend-deployment.yaml
           kubectl apply -f backend-deployment.yaml

@@ -37,8 +37,8 @@ jobs:
 
       - name: Build and push Docker images
         run: |
-          docker build -t d0fac12a8b49 ./frontend
-          docker build -t bc7e3a44bde5 ./backend
+          docker build -t sample20 ./frontend
+          docker build -t sample21 ./backend
 
           docker login -u "${vaji123}" -p "${Octalite1234}" docker.io 
           

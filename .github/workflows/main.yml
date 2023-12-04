@@ -46,7 +46,17 @@ jobs:
           docker tag sample20 vaji123/sample:sample20
           docker push  docker.io/vaji123/sample:sample20
 
+          cd backend
+          docker build -t sample21 .
+
+          docker login -u "vaji123" -p "dckr_pat_gOMv_MeLr1IHPTRdkXCUqJMAKWE" docker.io
+
+          docker tag sample21 vaji123/sample:sample21
+          docker push  docker.io/vaji123/sample:sample21
+
       - name: Deploy to Kubernetes
         run: |
-          kubectl apply -f kubernetes/frontend-deployment.yaml
-          kubectl apply -f kubernetes/backend-deployment.yaml
+
+          cd kubernetes
+          kubectl apply -f frontend-deployment.yaml
+          kubectl apply -f backend-deployment.yaml

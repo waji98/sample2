@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productivity-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productivity-backend
+  template:
+    metadata:
+      labels:
+        app: productivity-backend
+    spec:
+      containers:
+      - name: backend
+        image: vaji123/sample:sample13  # Replace with your Docker registry and tag
+        ports:
+        - containerPort: 5001
+        env:
+        - name: AWS_REGION
+          value: us-east-1

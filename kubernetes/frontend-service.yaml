@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: productivity-frontend-service
+spec:
+  selector:
+    app: productivity-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+      nodePort: 31428
+  type: NodePort

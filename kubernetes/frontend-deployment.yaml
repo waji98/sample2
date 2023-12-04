@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productivity-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productivity-frontend
+  template:
+    metadata:
+      labels:
+        app: productivity-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: vaji123/sample:sample15  # Replace with your Docker registry and tag
+        ports:
+        - containerPort: 5000
+

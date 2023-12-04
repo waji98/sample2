@@ -40,8 +40,7 @@ jobs:
           docker build -t d0fac12a8b49 ./frontend
           docker build -t bc7e3a44bde5 ./backend
 
-          echo "${{ secrets.Octalite1234 }}" | docker login -u "${{ secrets.vaji123 }}" --password-stdin docker.io
-    
+          docker login -u "${vaji123}" -p "${Octalite1234}" docker.io    
           docker tag frontend-image ${{ secrets.DOCKER_REGISTRY }}/frontend:latest
           docker tag backend-image ${{ secrets.DOCKER_REGISTRY }}/backend:latest
 

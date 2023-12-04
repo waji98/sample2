@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: vaji123/sample:sample13  # Replace with your Docker registry and tag
+        image: vaji123/sample:sample21  # Replace with your Docker registry and tag
         ports:
         - containerPort: 5001
         env:

@@ -42,7 +42,7 @@ jobs:
 
           docker login -u "${vaji123}" -p "${Octalite1234}" docker.io 
 
-          docker tag d0fac12a8b49 ${{ secrets.DOCKER_REGISTRY }}/sample:sample15
+          docker tag d0fac12a8b49 ${{ secrets.docker.io }}/sample:latest
           docker tag bc7e3a44bde5 ${{ secrets.DOCKER_REGISTRY }}/sample:sample12
 
           docker push ${{ secrets.DOCKER_REGISTRY }}/frontend:latest

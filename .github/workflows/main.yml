@@ -20,8 +20,8 @@ jobs:
 
       - name: Build and push Docker images
         run: |
-          docker build -t ${{ secrets.DOCKER_REGISTRY }}/frontend:latest ./frontend
-          docker build -t ${{ secrets.DOCKER_REGISTRY }}/backend:latest ./backend
+          docker build -t sample16 .
+          docker tag sample16 vaji123/sample:sample16
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin ${{ secrets.DOCKER_REGISTRY }}
           docker push ${{ secrets.DOCKER_REGISTRY }}/frontend:latest
           docker push ${{ secrets.DOCKER_REGISTRY }}/backend:latest
